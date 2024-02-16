@@ -1,0 +1,11 @@
+.lim {
+    width: 100%;
+    overflow: auto; 
+   
+  }
+  
+.lim p {
+    margin: 0; 
+    padding: 10px; 
+  }
+
