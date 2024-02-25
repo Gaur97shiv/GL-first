@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, IconButton, Typography, Stack, Button } from '@mui/material';
 import BusinessIcon from '@mui/icons-material/Business';
-import Dropdown from './Dropdown';
 
 const Navbar = () => {
   const [scrollTriggered, setScrollTriggered] = useState(false);
@@ -39,12 +38,12 @@ const Navbar = () => {
         <Stack direction='row' spacing={2}>
           <Button color='inherit'>Features</Button>
           <Button color='inherit'>contact</Button>
-          <Dropdown />
-          <Button color='inherit' sx={{ color: 'black' }}>Location</Button>
+        
+          <Button color='inherit' >Location</Button>
           <Button color='inherit'>About</Button>
         </Stack>
       </Toolbar>
-    </AppBar>
+    </AppBar> 
   );
 };
 
