@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, IconButton, Typography, Stack, Button } from '@mui/material';
 import BusinessIcon from '@mui/icons-material/Business';
-
-const Navbar = () => {
+import Dropdown from './Dropdown';
+import { useNavigate } from 'react-router-dom';
+const Navbar = (props) => {
+  const navigate=useNavigate();
   const [scrollTriggered, setScrollTriggered] = useState(false);
   useEffect(() => {
+   
     function handleScroll() {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 0) {
@@ -21,6 +24,9 @@ const Navbar = () => {
     };
   }, []); 
 
+function handleClick(){
+navigate("/");
+}
   const navbg = {
     backgroundColor: scrollTriggered ? '#333' : 'transparent',
     boxShadow: scrollTriggered ? '0 4px 6px rgba(0,0,0,.1)' : 'none'
@@ -29,7 +35,7 @@ const Navbar = () => {
   return (
     <AppBar sx={navbg}>
       <Toolbar>
-        <IconButton size='large' edge="start" color='inherit' aria-label='logo'>
+        <IconButton size='large' edge="start" color='inherit' aria-label='logo' onClick={handleClick} >
           <BusinessIcon />
         </IconButton>
         <Typography variant='h8' component='div' sx={{ flexGrow: 1 }}>
@@ -38,7 +44,7 @@ const Navbar = () => {
         <Stack direction='row' spacing={2}>
           <Button color='inherit'>Features</Button>
           <Button color='inherit'>contact</Button>
-        
+           <Dropdown/>
           <Button color='inherit' >Location</Button>
           <Button color='inherit'>About</Button>
         </Stack>
