@@ -28,17 +28,25 @@ function Dropdown() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
+        
+      
         <MenuItem >
-          <Link to="/Hospitality">Hospitality</Link>
-        </MenuItem>
-        <MenuItem >
-          <Link to="/Automation">Automation</Link>
+          <Link to="/automation">Automation</Link>
         </MenuItem>
         <MenuItem >
           <Link to="/banking">Banking</Link>
         </MenuItem>
         <MenuItem >
           <Link to="/tech">Technology</Link>
+        </MenuItem>
+        <MenuItem >
+          <Link to="/hospitality">Hospitality</Link>
+        </MenuItem>
+        <MenuItem >
+          <Link to="/call">call</Link>
+        </MenuItem>
+        <MenuItem >
+          <Link to="/call2">call2</Link>
         </MenuItem>
       </Menu>
     </div>

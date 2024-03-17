@@ -6,16 +6,20 @@ import Hospitality from "./Components/image/Hospitality.jpg"
 import Banking from "./Components/image/Banking.jpg"
 import technology from "./Components/image/technology.jpg";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Call from './Pages/Call';
+import Call2 from './Pages/Home/Call2';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/"  exact element={<Home  image={GlobalLogic}/>} />
-        <Route path="/Hospitality" element={<Home Iconnanme={"Hospitality"} image={Hospitality}/>} />
-        <Route path="/Automation" element={<Home Iconname={"Automation"} image={Automation}/>} />
-        <Route path="/banking" element={<Home  Iconname={"Banking"} image={Banking}/>} />
-        <Route path="/tech" element={<Home  Iconname={"Technology"} image={technology}/>} />
+        <Route path="/Automation" element={<Home Iconname="Automation" image={Automation}/>} />
+        <Route path="/banking" element={<Home  Iconname="Banking" image={Banking}/>} />
+        <Route path="/tech" element={<Home  Iconname="Technology" image={technology}/>} />
+        <Route path="/hospitality" element={<Home Iconname="Hospitality" image={Hospitality}/>} />
+        <Route path="/call" element={<Call/>} />
+        <Route path="/call2" element={<Call2/>} />
       </Routes>
     </BrowserRouter>
   );

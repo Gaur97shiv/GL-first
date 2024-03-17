@@ -4,7 +4,9 @@ import styles from "./Home.module.css";
 import Text from "../../Components/Text/Text";
 import Carousel from "../../Components/Carousel/Carousel";
 const Home = (props) => {
+  console.log(props.Iconname);
   return (
+
     <>
     <div className={styles.bg}>
       <Navbar className={styles.navbar} IN={props.Iconname} />
@@ -23,7 +25,7 @@ const Home = (props) => {
         width="1000"
         height="600"
       ></iframe>
-  
+    
     </div>
     <div className={styles.car}>
     <Carousel className={styles.carousel1} />
