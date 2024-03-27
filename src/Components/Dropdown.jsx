@@ -43,9 +43,6 @@ function Dropdown() {
           <Link to="/hospitality">Hospitality</Link>
         </MenuItem>
         <MenuItem >
-          <Link to="/call">call</Link>
-        </MenuItem>
-        <MenuItem >
           <Link to="/call2">call2</Link>
         </MenuItem>
       </Menu>
